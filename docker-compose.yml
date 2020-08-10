@@ -1,0 +1,12 @@
+version: '3.2'
+
+services:
+  first.knn.job:
+    container_name: first.knn.job
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      - ./scripts:/usr/src/app/scripts
+    ports:
+      - '8888:8080'
